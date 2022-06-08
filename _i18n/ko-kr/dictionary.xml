@@ -86,11 +86,9 @@
   <block id="8e54c9dd2c325f6430e1789d91c327ee" category="list-text">E8ds_v4^1^</block>
   <block id="5d47d15bb6c95cde595a22f670bc8cdf" category="list-text">E32ds_v4^1^</block>
   <block id="a9161f4d77d799baa3a3dc4cfeaefca3" category="list-text">E48ds_v4^1^</block>
-  <block id="195512f323b29b79f5b71cceb3a49a7d" category="list-text">E80ids_v4^2^</block>
   <block id="3e7433721426ddc5bb6007a1f480b7e0" category="cell">지원되는 디스크 유형입니다</block>
   <block id="8dbeeeefc901c0dbb39a9c1332aaeeb9" category="cell">프리미엄 페이지 Blob</block>
   <block id="18ca3c89ae9e8edbe217f2c9b7c6107d" category="inline-link">쓰기 속도 선택에 대해 자세히 알아보세요</block>
-  <block id="937cb82fad9af153ff18d3ee14caebd5" category="list-text">Cloud Volumes ONTAP는 HA 쌍을 사용하는 경우 이러한 VM 유형의 빠른 쓰기 속도를 지원합니다. 단일 노드 시스템을 사용하는 경우 모든 인스턴스 유형에서 높은 쓰기 속도가 지원됩니다.<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>.</block>
   <block id="4efc25f6cc7013d95ca2f5ab1dcc3366" category="list-text">이 VM은 Azure 유지 관리 제어가 필요한 경우에만 권장됩니다. 더 높은 가격 책정으로 인해 다른 사용 사례에는 권장되지 않습니다.</block>
   <block id="d642bc6852e213242f2c21d17b6d3e43" category="list-text">PAYGO Explore는 Azure의 HA 쌍에서 지원되지 않습니다.</block>
   <block id="36e4aa065725aff22926f2fed53bc3c7" category="section-title">지원되는 디스크 크기입니다</block>
@@ -644,7 +642,6 @@
   <block id="f84be4481dc8e8613c8c66fe2b277872" category="paragraph">C5, M5 또는 R5 인스턴스 제품군의 인스턴스 유형으로 변경하는 것이 좋습니다.</block>
   <block id="2be187f608e3ad4af24d83ba1557f439" category="section-title">DS3_v2</block>
   <block id="65b0a9dbf9678f2f159ed56b9d03e3c6" category="paragraph">9.9.1 릴리즈부터 DS3_v2 VM 유형은 더 이상 신규 및 기존 Cloud Volumes ONTAP 시스템에서 지원되지 않습니다. 이 VM 유형에서 실행 중인 기존 시스템이 있는 경우 9.10.1로 업그레이드하기 전에 VM 유형을 변경해야 합니다.</block>
-  <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">모든 Cloud Manager 설명서</block>
   <block id="da38098873cb3db962a9491ab33ff93d" category="sidebar">릴리스 노트 홈</block>
   <block id="33871b6190a8d5adbe8b15282054766c" category="sidebar">새로운 소식</block>
   <block id="8efc36afc2e7202a9c9bda00b8e8a75d" category="sidebar">라이센스 개요</block>
@@ -769,4 +766,7 @@
   <block id="0e527cc0bd71f51586da60dcfda739a8" category="paragraph">버전 3.9.13 이상을 실행하는 커넥터가 있는 경우 Microsoft Azure의 Cloud Volumes ONTAP에서 9.10.1 P3 패치를 사용할 수 있습니다. Cloud Manager에서 기존 시스템을 이 패치 릴리즈로 업그레이드하라는 메시지가 표시됩니다.</block>
   <block id="4c7cf73669136d536c96ca7317eb5ceb" category="inline-link">P3 패치에서 해결된 버그 목록을 봅니다</block>
   <block id="a722cfec26c0ca315135920010ebf5b4" category="paragraph"><block ref="bc7d1c15a2a600370c4d2552355bf0a9" category="inline-link-rx"></block> (NetApp Support 사이트 로그인 필요).</block>
+  <block id="0d8238cb20fb41ede1eb68d45d598c4f" category="list-text">단일 노드 시스템을 사용하는 경우 모든 인스턴스 유형에서 높은 쓰기 속도가 지원됩니다. 구축 중 또는 이후에 언제든지 Cloud Manager에서 빠른 쓰기 속도를 설정할 수 있습니다.<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>.</block>
+  <block id="4e1b6146fa2cb1efc8bff10f1cf7e93c" category="list-text">E80ids_v4^1,2^</block>
+  <block id="7ddea5d9f1e01b01ba11b40da7046d95" category="list-text">Cloud Volumes ONTAP는 HA 쌍을 사용하는 경우 이러한 VM 유형의 빠른 쓰기 속도를 지원합니다. 구축 중 또는 이후에 언제든지 Cloud Manager에서 빠른 쓰기 속도를 설정할 수 있습니다.<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>.</block>
 </blocks>
