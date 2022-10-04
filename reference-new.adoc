@@ -20,6 +20,14 @@ Cloud Volumes ONTAP 9.10.1 에는 여러 가지 새로운 기능과 향상된 �
 
 
 
+== 9.10.1 P6(2022년 7월 13일)
+
+Microsoft Azure의 Cloud Volumes ONTAP에 9.10.1 P6 패치는 이제 커넥터 버전이 3.9.19 이상인 경우 사용할 수 있습니다. Cloud Manager에서 기존 시스템을 이 패치 릴리즈로 업그레이드하라는 메시지가 표시됩니다.
+
+https://mysupport.netapp.com/site/products/all/details/cloud-volumes-ontap/downloads-tab/download/62632/9.10.1P6["P6 패치에서 해결된 버그 목록을 봅니다"^] (NetApp Support 사이트 로그인 필요).
+
+
+
 == 9.10.1 P3(2022년 5월 15일)
 
 버전 3.9.13 이상을 실행하는 커넥터가 있는 경우 Microsoft Azure의 Cloud Volumes ONTAP에서 9.10.1 P3 패치를 사용할 수 있습니다. Cloud Manager에서 기존 시스템을 이 패치 릴리즈로 업그레이드하라는 메시지가 표시됩니다.
