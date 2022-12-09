@@ -222,7 +222,6 @@
   <block id="1eba71d64e6c5e410e558530711e835b" category="summary">알려진 제한 사항은 이 제품 릴리스에서 지원하지 않거나 올바르게 상호 운용되지 않는 플랫폼, 장치 또는 기능을 식별합니다. 이러한 제한 사항을 주의 깊게 검토하십시오.</block>
   <block id="fc5c1a5c8028c4da4d0b0de1a9b1df3d" category="doc">모든 클라우드 공급자의 제한</block>
   <block id="a20ea8590a5bc20c473682a1138198a0" category="paragraph">AWS, Azure, Google Cloud와 같은 모든 클라우드 공급자의 Cloud Volumes ONTAP에는 다음과 같은 제한 사항이 적용됩니다.</block>
-  <block id="cbc4bd981852b46f0fbf6e6a6d4ed5af" category="section-title">Cloud Volumes ONTAP 배포는 클라우드 공급자의 콘솔에서 수정할 수 없습니다</block>
   <block id="9baac3e3e045ecc1a8ffecb16253a5d1" category="paragraph">클라우드 공급자의 콘솔에서 Cloud Volumes ONTAP 시스템의 구성을 변경하면 지원되지 않는 구성이 생성됩니다. Cloud Manager에서 생성 및 관리하는 Cloud Volumes ONTAP 리소스에 대한 모든 변경은 시스템 안정성과 Cloud Manager의 시스템 관리 기능에 영향을 줄 수 있습니다.</block>
   <block id="871cdf07a10d1cc27cb3166e7a820a66" category="section-title">디스크와 애그리게이트는 Cloud Manager에서 관리해야 합니다</block>
   <block id="dbdb55d3acfbb139cd66db544b19d738" category="paragraph">모든 디스크와 애그리게이트는 Cloud Manager에서 직접 생성 및 삭제해야 합니다. 다른 관리 도구에서 이러한 작업을 수행해서는 안 됩니다. 이렇게 하면 시스템 안정성에 영향을 주고 향후 디스크를 추가할 수 없도록 하며 중복 클라우드 공급자 비용을 생성할 수 있습니다.</block>
@@ -531,9 +530,6 @@
   <block id="0066e8873a17823db601b98ebbc37dd2" category="section-title">HA 제한 사항</block>
   <block id="b1969fa9ebe4dd2003618adb77082978" category="paragraph">일부 지역에서는 HA 쌍이 지원되지 않습니다.</block>
   <block id="d91c9372e1fdf74d651217f1a36e518b" category="inline-link">지원되는 Azure 지역 목록을 봅니다</block>
-  <block id="1e6996b39daf779b565c50c8411fbc8d" category="paragraph"><block ref="8e36f0f32d75ebd3c7851e726c538544" category="inline-link-rx"></block>.</block>
-  <block id="e4f5b6f59db7bfa0e08c02262ddbd654" category="section-title">CSP 파트너는 선불 종량제(Pay-as-you-go)을 사용할 수 없습니다</block>
-  <block id="f2ff5834d93c258f0fc4ad6cf6a17942" category="paragraph">Microsoft 클라우드 솔루션 공급자(CSP) 파트너인 경우 CSP 파트너는 선불 종량제 구독을 사용할 수 없으므로 Cloud Volumes ONTAP Explore, Standard 또는 Premium을 배포할 수 없습니다. 라이센스를 구입하고 Cloud Volumes ONTAP BYOL을 구축해야 합니다.</block>
   <block id="9141535b8d150812f3cded29f090ad8c" category="summary">Google Cloud에서는 여러 Cloud Volumes ONTAP 구성이 지원됩니다.</block>
   <block id="9e931b1cee40a7346d1f06dd6a75ba8e" category="doc">Google Cloud에서 지원되는 구성</block>
   <block id="0c11951245f2ef7895ea0fc514386d6e" category="paragraph">Cloud Volumes ONTAP는 Google Cloud Platform에서 단일 노드 시스템으로, 내결함성 및 무중단 운영을 지원하는 고가용성(HA) 노드 쌍으로 지원됩니다.</block>
@@ -679,4 +675,10 @@
   <block id="f072eddf76dc8c19f3d32a7263fe7931" category="paragraph"><block ref="37cca4b92d12a1904a84ee04c60f6ada" category="inline-link-macro-rx"></block>.</block>
   <block id="09ea0908fbfc4cde85bf416e35dc55c8" category="inline-link-macro">NetApp 지원</block>
   <block id="0b55c70d5652d8fe1f5ddc75633eaa95" category="paragraph">을 참조하십시오 <block ref="0bcfd67fb2b966e3378fbf640ee81a22" category="inline-link-macro-rx"></block> 이러한 인스턴스 유형의 가용성 및 지원에 대한 자세한 내용을 보려면 를 참조하십시오.</block>
+  <block id="2819feead2b07762a4465189ab8b2f52" category="paragraph-title">HA 쌍의 경우, 노드당 또는 전체 HA 쌍의 라이센스 용량 제한이 있습니까?</block>
+  <block id="7093c2c9844cf46dcd5d50c6d596d244" category="paragraph-title">HA 쌍의 경우, 미러링된 데이터가 라이센스 용량 제한에 대해 계산됩니까?</block>
+  <block id="04e02f6b2c0d8cc75f029fa0d4d1378f" category="section-title">Cloud Volumes ONTAP 배포를 클라우드 공급자의 콘솔에서 수정하면 안 됩니다</block>
+  <block id="2f9882645b2c32820ad085240bacb763" category="paragraph-title">HA의 경우 노드당 또는 전체 HA 쌍의 라이센스 용량 제한이 있습니까?</block>
+  <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">AWS의 HA 시스템에서 미러링된 데이터는 용량 제한에 따라 계산됩니까?</block>
+  <block id="8e36f0f32d75ebd3c7851e726c538544" category="paragraph"><block ref="8e36f0f32d75ebd3c7851e726c538544" category="inline-link-rx"></block></block>
 </blocks>
