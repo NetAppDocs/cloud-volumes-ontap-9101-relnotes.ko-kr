@@ -14,7 +14,6 @@
   <block id="032ad17d65f47ce036675718d3986c48" category="paragraph">C5D 및 R5D 인스턴스 유형에는 Cloud Volumes ONTAP가 _Flash Cache_로 사용하는 로컬 NVMe 스토리지가 있습니다. 다음 제한 사항을 참고하십시오.</block>
   <block id="341cc964e0c52fec40f9705182116dda" category="list-text">Flash Cache의 성능 향상 기능을 활용하려면 모든 볼륨에서 압축을 해제해야 합니다.</block>
   <block id="405cb575e50b611a22ec99d1abb3f202" category="inline-link">CLI를 사용하여 데이터 압축을 비활성화합니다</block>
-  <block id="e7c76e369ac11cd66c4eb87009b46b45" category="paragraph">Cloud Manager에서 볼륨을 생성할 때 스토리지 효율성을 선택하지 않거나, 볼륨을 생성한 후 생성할 수 있습니다<block ref="41233aab48d70287f1bbc60d78ce6eab" category="inline-link-rx"></block>.</block>
   <block id="444f10b28a63ab25d9664d0647602d07" category="list-text">재부팅 후 캐시 재가기는 Cloud Volumes ONTAP에서 지원되지 않습니다.</block>
   <block id="c564897ef3b9328940c3edd5bc917926" category="section-title">Amazon CloudWatch에서 잘못된 경보가 보고되었습니다</block>
   <block id="4b88d56bd65ef92611ac63064c38369f" category="inline-link">Amazon CloudWatch 를 참조하십시오</block>
@@ -222,11 +221,6 @@
   <block id="1eba71d64e6c5e410e558530711e835b" category="summary">알려진 제한 사항은 이 제품 릴리스에서 지원하지 않거나 올바르게 상호 운용되지 않는 플랫폼, 장치 또는 기능을 식별합니다. 이러한 제한 사항을 주의 깊게 검토하십시오.</block>
   <block id="fc5c1a5c8028c4da4d0b0de1a9b1df3d" category="doc">모든 클라우드 공급자의 제한</block>
   <block id="a20ea8590a5bc20c473682a1138198a0" category="paragraph">AWS, Azure, Google Cloud와 같은 모든 클라우드 공급자의 Cloud Volumes ONTAP에는 다음과 같은 제한 사항이 적용됩니다.</block>
-  <block id="9baac3e3e045ecc1a8ffecb16253a5d1" category="paragraph">클라우드 공급자의 콘솔에서 Cloud Volumes ONTAP 시스템의 구성을 변경하면 지원되지 않는 구성이 생성됩니다. Cloud Manager에서 생성 및 관리하는 Cloud Volumes ONTAP 리소스에 대한 모든 변경은 시스템 안정성과 Cloud Manager의 시스템 관리 기능에 영향을 줄 수 있습니다.</block>
-  <block id="871cdf07a10d1cc27cb3166e7a820a66" category="section-title">디스크와 애그리게이트는 Cloud Manager에서 관리해야 합니다</block>
-  <block id="dbdb55d3acfbb139cd66db544b19d738" category="paragraph">모든 디스크와 애그리게이트는 Cloud Manager에서 직접 생성 및 삭제해야 합니다. 다른 관리 도구에서 이러한 작업을 수행해서는 안 됩니다. 이렇게 하면 시스템 안정성에 영향을 주고 향후 디스크를 추가할 수 없도록 하며 중복 클라우드 공급자 비용을 생성할 수 있습니다.</block>
-  <block id="1d7a5501cfb31aff808abb63ef9085c2" category="section-title">Cloud Manager에서 소프트웨어 업데이트를 완료해야 합니다</block>
-  <block id="93e3c3d0ea43d600b3c3cd4548ea3987" category="paragraph">Cloud Volumes ONTAP 업그레이드는 Cloud Manager에서 완료해야 합니다. System Manager 또는 CLI를 사용하여 Cloud Volumes ONTAP를 업그레이드해서는 안 됩니다. 이렇게 하면 시스템 안정성에 영향을 줄 수 있습니다.</block>
   <block id="6678cc30386be959db340cbdd54ecbda" category="section-title">클라우드 공급자 스냅샷은 백업 및 복구 계획에 사용할 수 없습니다</block>
   <block id="f6fdc425c22fbe91b4cd43c5702c7923" category="paragraph">Cloud Volumes ONTAP 데이터에 대한 백업 및 복구 계획에 클라우드 공급자의 스냅샷을 사용하면 안 됩니다. 항상 ONTAP 스냅샷 복사본 또는 타사 백업 솔루션을 사용하여 Cloud Volumes ONTAP에 호스팅된 데이터를 백업 및 복원해야 합니다.</block>
   <block id="71674eaa07f12640df0ea0be77ecd9ac" category="inline-link">Cloud Backup Service를 사용하여 ONTAP 데이터를 백업 및 복원하는 방법에 대해 알아보십시오</block>
@@ -273,14 +267,12 @@
   <block id="2967727d3f344e8a55ae0d47d294d7d1" category="paragraph">패킷 미러링이 활성화된 경우 Cloud Volumes ONTAP가 제대로 작동하지 않습니다.</block>
   <block id="b5050f17750ec84285bec219771841c4" category="section-title">Google Private Service Connect 제한 사항</block>
   <block id="9fb3c7aadbb59d428d3c01efb5689f4b" category="inline-link">Google Private Service Connect</block>
-  <block id="7af98a0e0cd62cd4ddc103341d51fda2" category="inline-link">Cloud Manager API 엔드포인트</block>
   <block id="406156e49006d700786c581646d94504" category="paragraph">Cloud Volumes ONTAP의 데이터를 Google 클라우드 스토리지 버킷으로 계층화하는 것은 현재 프라이빗 서비스 Connect에서 지원되지 않습니다.</block>
   <block id="6a8a2e92f318dbd4f6a8e47b03350d4d" category="summary">Cloud Volumes ONTAP는 Azure에서 스토리지 구성 제한으로 안정적인 운영 제공 최상의 성능을 위해 시스템을 최대 값으로 구성하지 마십시오.</block>
   <block id="e622ddac1a96836929babb5b993749ba" category="doc">Azure의 스토리지 제한</block>
   <block id="b3dfe19c7d46d1f8795ac17bf3d5a909" category="paragraph">Cloud Volumes ONTAP는 안정적인 운영을 제공하기 위해 스토리지 구성에 제한이 있습니다. 최상의 성능을 위해 시스템을 최대 값으로 구성하지 마십시오.</block>
   <block id="ecedb9353641e4bd058af0268a6edce8" category="section-title">라이센스별 최대 시스템 용량</block>
   <block id="6fa7d9268a4a052eee070e7e621245fe" category="paragraph">Cloud Volumes ONTAP 시스템의 최대 시스템 용량은 라이센스에 따라 결정됩니다. 최대 시스템 용량에는 디스크 기반 스토리지와 데이터 계층화에 사용되는 오브젝트 스토리지가 포함됩니다.</block>
-  <block id="b160602445b0a1ec96684f26bf8b35d3" category="paragraph">NetApp은 시스템 용량 제한을 초과하지 않습니다. 라이센스가 부여된 용량 제한에 도달하면 Cloud Manager에서 작업 필요 메시지를 표시하고 더 이상 디스크를 추가할 수 없습니다.</block>
   <block id="643a529396d04bbbe61c8daa70456163" category="cell">최대 시스템 용량(디스크 + 오브젝트 스토리지)</block>
   <block id="768560d8110ed230b7fde848941af107" category="cell">2TiB(데이터 계층화는 Explore에서 지원되지 않음)</block>
   <block id="44007958b04e5e15a25a3ca1ee98abeb" category="paragraph">용량 제한은 전체 HA 쌍에 대한 것입니다. 노드 단위로 표시되지 않습니다. 예를 들어, Premium 라이센스를 사용하는 경우 두 노드 간에 최대 368TiB의 용량을 가질 수 있습니다.</block>
@@ -379,7 +371,6 @@
   <block id="38de34e4b49b8adfeb2c678818915204" category="cell">4,995</block>
   <block id="1a07b3809a1ae9afeb461f935181ced5" category="cell">Snapshot 복사본 *</block>
   <block id="e8bd298f1a45dbe18647bf02f27ac92e" category="cell">1,023</block>
-  <block id="f930216066584d74a1d100b4781661f9" category="list-text">Cloud Manager는 SVM 재해 복구에 대한 설정 또는 오케스트레이션 지원을 제공하지 않습니다. 또한, 추가 SVM에서 스토리지 관련 작업을 지원하지 않습니다. SVM 재해 복구에 System Manager 또는 CLI를 사용해야 합니다.</block>
   <block id="412af2a2404a4e920b18be59197204b0" category="inline-link">SVM 재해 복구 준비 Express 가이드</block>
   <block id="c15bb50c43eaf0ceb1bc0ce3d7503ebd" category="list-text"><block ref="c15bb50c43eaf0ceb1bc0ce3d7503ebd" category="inline-link-rx"></block></block>
   <block id="a06e9c241b02eb678d35f19c0eec257f" category="inline-link">SVM 재해 복구 익스프레스 가이드 를 참조하십시오</block>
@@ -408,7 +399,6 @@
   <block id="86eaddcad9cef8a014b014a3ad2afb9c" category="cell">368TB</block>
   <block id="38797647ee0806ca5a6dba902f03f6e0" category="cell">라이센스당 368TB</block>
   <block id="ce5ee1bd79a3fbc4ee9fee207a94ef54" category="paragraph">용량 제한은 전체 HA 쌍에 대한 것입니다. 노드 단위로 표시되지 않습니다. 예를 들어, Premium 라이센스를 사용하는 경우 두 노드 간에 최대 368TB의 용량을 가질 수 있습니다.</block>
-  <block id="1ddc84b3dc9fe6599d89fd9b7f5c6660" category="paragraph">아니요, 그렇지 않습니다. HA 쌍의 데이터는 노드 간에 동기식으로 미러링되므로 Google Cloud에서 장애가 발생할 경우 데이터를 사용할 수 있습니다. 예를 들어, 노드 A에서 8TB 디스크를 구매하는 경우 Cloud Manager에서는 미러링된 데이터에 사용되는 노드 B에도 8TB 디스크를 할당합니다. 16TB의 용량을 프로비저닝했지만 라이센스 제한에 대해 8TB만 계산합니다.</block>
   <block id="466cd90b62b5da75ee4bd662add41e7f" category="section-title">디스크 및 계층화 제한</block>
   <block id="49e0d392d83f24aa1384f18b22975ef6" category="paragraph">아래 표에는 디스크 단독으로, 디스크 및 콜드 데이터를 오브젝트 스토리지로 계층화하는 경우 최대 시스템 용량이 나와 있습니다. 디스크 제한은 사용자 데이터가 포함된 디스크에만 적용됩니다. 이 제한에는 부팅 디스크 및 루트 디스크가 포함되지 않습니다.</block>
   <block id="08fca9107919e2a3190d5edc75ce7c61" category="cell">최대 데이터 디스크 수</block>
@@ -440,7 +430,6 @@
   <block id="00341a78c2eaf7d804cfe027a2f67870" category="summary">Cloud Volumes ONTAP는 AWS에서 스토리지 구성을 제한하여 안정적인 운영 기능을 제공합니다. 최상의 성능을 위해 시스템을 최대 값으로 구성하지 마십시오.</block>
   <block id="6870aed8e6dfc4f093d5b5c6f8a4d81c" category="doc">AWS에서의 스토리지 제한</block>
   <block id="13e43f7520d8163c6554fc15774d56ed" category="paragraph">일부 구성에서는 디스크 제한만으로 용량 제한에 도달하지 못합니다. 이 경우 를 통해 용량 제한에 도달할 수 있습니다<block ref="91a4fc4ecb983c2fca7588f26341e223" category="inline-link-rx"></block>. 자세한 내용은 아래의 용량 및 디스크 제한을 참조하십시오.</block>
-  <block id="8644b747d80d3144a35c2f7a3eb37c2e" category="paragraph">아니요, 그렇지 않습니다. AWS HA 쌍의 데이터는 노드 간에 동기식으로 미러링되므로 장애 발생 시 데이터를 사용할 수 있습니다. 예를 들어, 노드 A에서 8TiB 디스크를 구매하는 경우 Cloud Manager는 미러링된 데이터에 사용되는 노드 B에도 8TiB 디스크를 할당합니다. 16TiB의 용량을 프로비저닝한 경우 라이센스 제한에서 8TiB만 가능합니다.</block>
   <block id="c029ebf0cab0f40812ebec7c644fef41" category="section-title">EC2 인스턴스별로 디스크 및 계층화가 제한됩니다</block>
   <block id="5a9c94e941761c15ef227dfa8c3fc6d8" category="paragraph">Cloud Volumes ONTAP는 EBS 볼륨을 디스크로 사용하며 최대 디스크 크기는 16TiB입니다. 아래 섹션에는 EC2 인스턴스 유형 중 많은 수의 디스크 제한이 서로 다르기 때문에 EC2 인스턴스 제품군별 디스크 및 계층화 제한이 나와 있습니다. 또한 디스크 제한은 단일 노드 시스템과 HA 쌍 간에 다릅니다.</block>
   <block id="cf3a2d2c139bf5c9cc87fe714bfff3b1" category="paragraph">다음 사항에 유의하십시오.</block>
@@ -501,7 +490,6 @@
   <block id="02e74f10e0327ad868d138f2b4fdd6f0" category="cell">27</block>
   <block id="67c6a1e7ce56d3d6fa748ab6d9af3fd7" category="cell">47</block>
   <block id="ecec66d315c28b83ea2e4c24466a6778" category="list-text">이 숫자는 Cloud Volumes ONTAP를 구축하고 설정한 후 포트 e0a에서 사용 가능한 _remaining_private IP 주소 수를 나타냅니다. 예를 들어, *.2xLarge 시스템은 네트워크 인터페이스당 최대 15개의 IP 주소를 지원합니다. HA 쌍이 단일 AZ에 배포되면 5개의 전용 IP 주소가 e0a 포트에 할당됩니다. 따라서 *.2xLarge 인스턴스 유형을 사용하는 HA 쌍에는 추가 스토리지 VM에 사용할 수 있는 10개의 전용 IP 주소가 남아 있습니다.</block>
-  <block id="717ac98dd2c26224834bdc47a5a79849" category="list-text">이 열에 나열된 번호에는 Cloud Manager가 기본적으로 생성하는 초기 스토리지 VM이 포함됩니다. 예를 들어, 이 열에 24가 표시되면 총 24개의 스토리지 VM을 추가로 23개 생성할 수 있음을 의미합니다.</block>
   <block id="5be8cdd9a3ac4856418d3e7ef11fe0d1" category="list-text">스토리지 VM의 관리 LIF는 선택 사항입니다. 관리 LIF는 SnapCenter과 같은 관리 툴에 대한 연결을 제공합니다.</block>
   <block id="d5b5d1eda2a2c0d060f59094000e6aea" category="paragraph">이 경우 전용 IP 주소가 필요하므로 생성할 수 있는 추가 스토리지 VM의 수가 제한됩니다. 단, 여러 AZs의 HA 쌍만 예외입니다. 이 경우 관리 LIF의 IP 주소는 _floating_ip 주소이므로 _private_ip 제한에 대해 계산되지 않습니다.</block>
   <block id="8e79313a5b6fb51ae3e76e64449c9f1d" category="cell">계층적 복제 깊이 ^1^</block>
@@ -549,7 +537,6 @@
   <block id="b4c4a8c75337dc28089aec3e79ae943c" category="list-text">PAYGO Explore에서는 Google Cloud Storage에 대한 데이터 계층화가 지원되지 않습니다.</block>
   <block id="46e869bc0f7a5fcdc09df010e1f48b25" category="list-text">CUSTOM-4-16384 시스템 유형은 새로운 Cloud Volumes ONTAP 시스템에서 더 이상 지원되지 않습니다.</block>
   <block id="0e3cb01898d99d0091e2a6f5a7572390" category="paragraph">이 기계 유형에서 실행 중인 기존 시스템이 있는 경우 계속 사용할 수 있지만 n2-standard-4 기계 유형으로 전환하는 것이 좋습니다.</block>
-  <block id="1d929e66099bae4b599c315f4d90f467" category="list-text">Cloud Manager 인터페이스는 Standard 및 BYOL:n1-highmem-4에 대한 추가 지원 시스템 유형을 보여 줍니다. 그러나 이 기계 유형은 생산 환경에 사용할 수 없습니다. 특정 연구소 환경에서만 사용할 수 있도록 만들었습니다.</block>
   <block id="7093754c2bc2f151c7deef337385971a" category="list-text">Google Cloud Platform 지역 지원은 를 참조하십시오<block ref="2b6a522631c3b3b8afac5466195e108a" category="inline-link-rx"></block>.</block>
   <block id="d29bff99e1f1d5529824e9017672d630" category="paragraph">Google Cloud에서는 aggregate에 동일한 유형과 크기의 디스크를 최대 6개까지 포함할 수 있습니다. 지원되는 디스크 크기는 다음과 같습니다.</block>
   <block id="dcfebc6fbca2c5316f55c914e6593d2d" category="list-text">100GB</block>
@@ -569,23 +556,18 @@
   <block id="1355c3042f61af06b4a61506de6e8ad1" category="paragraph">Cloud Volumes ONTAP에서 지속적으로 사용할 수 없는 CIFS 공유를 사용하는 CIFS/SMB 클라이언트는 인수 발생 시, 그리고 세션에서 사용하는 aggregate가 다시 애그리게이트의 홈 노드로 제공되면 모두 세션이 손실됩니다. 이는 CIFS/SMB 프로토콜 자체에 의해 적용되는 제한 사항입니다. 고객은 Takeover 및 Giveback에서 발생할 수 있는 문제를 방지하기 위해 타사 제품을 사용할 수 있습니다. 자세한 내용은 NetApp Support에 문의하십시오.</block>
   <block id="fd4593d74277f81ee9e8804577a73cba" category="summary">Cloud Volumes ONTAP 9.10.1 에는 여러 가지 새로운 기능과 향상된 기능이 포함되어 있습니다.</block>
   <block id="4d7262af7a10a07665457d001d4f8c1f" category="doc">Cloud Volumes ONTAP 9.10.1의 새로운 기능</block>
-  <block id="f9d74313da16b2bb412c1d7c5efd0534" category="inline-link">Cloud Manager 릴리즈 노트</block>
-  <block id="62703524dbb4d20326585184b2149d4d" category="paragraph">최신 버전의 Cloud Manager에는 추가 기능과 개선 사항도 포함되어 있습니다. 를 참조하십시오<block ref="b168941a5dc7eab411ef9dc2c7a220db" category="inline-link-rx"></block> 를 참조하십시오.</block>
   <block id="e675a1bc790504a4867dc88102a50717" category="section-title">라이센스 업데이트(2022년 2월 9일)</block>
   <block id="2de816b17ee9ae4a521784a41382a939" category="paragraph">Cloud Volumes ONTAP는 다음과 같은 시장 변화를 발표했습니다.</block>
   <block id="376dea476fe87cb9b0aae288d191c1cc" category="list-text">이제 Essentials 패키지와 Professional 패키지를 AWS 및 Google Cloud 마켓플레이스에서 사용할 수 있습니다.</block>
   <block id="8b5bbca61d06a4ab0106010904673191" category="paragraph">이러한 용량을 기준으로 비용을 지불할 수 있으며, 연간 계약을 클라우드 공급자로부터 직접 구매할 수 있습니다. NetApp에서 직접 용량 라이센스를 구매할 수 있습니다.</block>
   <block id="110339077b8549e028924c27d4eee889" category="paragraph">클라우드 마켓플레이스에 기존 구독이 있는 경우 이러한 새로운 오퍼링을 자동으로 구독할 수 있습니다. 새로운 Cloud Volumes ONTAP 작업 환경을 구축할 때 용량 충전을 선택할 수 있습니다.</block>
-  <block id="941041b0490626a7d2a15321ebfea99b" category="paragraph">신규 고객인 경우 새 작업 환경을 생성할 때 Cloud Manager에서 구독을 신청하라는 메시지가 표시됩니다.</block>
   <block id="0395ddea3013558664b640709c4005e0" category="list-text">AWS 및 Google Cloud 마켓플레이스를 통한 노드 라이센싱은 더 이상 사용되지 않으며 새 가입자에게 제공되지 않습니다. 여기에는 연간 계약 및 시간별 가입(탐색, 표준, 프리미엄)이 포함됩니다.</block>
   <block id="b353203eeb0af0c192ef9706121d7227" category="paragraph">이 충전 방법은 활성 서브스크립션을 보유한 기존 고객에게도 계속 사용할 수 있습니다.</block>
   <block id="ad66e158a2e414eee17bb2c5185f011a" category="inline-link-macro">Cloud Volumes ONTAP의 라이센스 옵션에 대해 자세히 알아보십시오</block>
   <block id="3fcf12dcb6c72aec4434fa4f3789fc52" category="paragraph"><block ref="07995a3dc55aacf94321b688970cb4b0" category="inline-link-macro-rx"></block>.</block>
   <block id="b9484773f069866761c1a46cba980b96" category="section-title">9.10.1 GA(2022년 1월 31일)</block>
   <block id="100e601746af2f6d484f1389c42cf450" category="paragraph">Cloud Volumes ONTAP 9.10.1의 GA(General Availability) 릴리스가 출시되었습니다. GA 릴리스에는 버그 수정이 포함되어 있습니다.</block>
-  <block id="f7c558ce34d6067dc97b14ed7b3a87cf" category="paragraph">Cloud Manager에서 9.10.1 RC1, 9.10.0 또는 9.9.1의 버전을 실행 중인 기존 시스템을 업그레이드하라는 메시지가 표시됩니다.</block>
   <block id="6cd05a49163b5aa6ee385dfc7347d079" category="section-title">더 많은 VM 유형 지원(2021년 1월 2일)</block>
-  <block id="26d82dd2fd724cf014cf26342bfc363f" category="paragraph">Cloud Manager 3.9.14 릴리스의 일부로 Cloud Volumes ONTAP는 이제 Microsoft Azure에서 9.10.1 릴리스부터 다음 VM 유형에서 지원됩니다.</block>
   <block id="ea3f9d369707ab2f7c6d6103ba7fe825" category="inline-link-macro">지원되는 구성 페이지</block>
   <block id="c1d3c86707fd51f161ab866a393c4e39" category="paragraph">로 이동합니다 <block ref="2359f0b8656be62b9d041cc49652a32e" category="inline-link-macro-rx"></block> 를 참조하십시오.</block>
   <block id="fbbb3f7e81b42e6927134feccd19e6ee" category="section-title">9.10.1 RC1(2021년 11월 28일)</block>
@@ -594,26 +576,18 @@
   <block id="958c6e45bc6a4858cf4786e749330e34" category="list-text">Microsoft Azure에서 실행되는 Cloud Volumes ONTAP HA 쌍의 계획되지 않은 페일오버 시간을 줄였습니다.</block>
   <block id="ae279385bdbd95d3d4d0c40949a51548" category="list-text">이제 NFSv4가 지원됩니다.</block>
   <block id="e05f85fda008e9ed4c4f090742f0a773" category="paragraph">Cloud Volumes ONTAP에서 이러한 향상된 기능을 사용하려면 Azure 구독에서 기능을 활성화해야 합니다. "소유자" 권한이 있는 Azure 사용자는 Azure CLI에서 이 기능을 활성화할 수 있습니다.</block>
-  <block id="da3502c908178000cd27f8ed329d92e8" category="paragraph">Azure 구독에서 이 기능을 활성화해야 하는 Cloud Volumes ONTAP 9.10.1 시스템의 경우 클라우드 관리자가 이러한 세부 정보를 작업 필요 메시지에 표시합니다.</block>
   <block id="4b86a9bfe35da8d5b3e1175b8664656d" category="list-text">Cloud Volumes ONTAP HA 쌍의 고가용성에는 문제가 없습니다. 이 Azure 기능은 ONTAP와 함께 작동하여 계획되지 않은 페일오버 이벤트로 인해 NFS 프로토콜에 대해 클라이언트에서 관측된 애플리케이션 중단 시간을 줄입니다.</block>
   <block id="74c86f2714a033254b4bc8058a066937" category="list-text">이 기능을 사용하도록 설정하는 것은 Cloud Volumes ONTAP HA 쌍의 무중단 기능입니다.</block>
   <block id="7dbbac252a198b9c7c543b30ca9455a6" category="list-text">Azure 구독에서 이 기능을 활성화해도 다른 VM에 문제가 발생하지 않습니다.</block>
   <block id="5f6c185eb38c56187fc699dfbe62654b" category="section-title">보안 강화</block>
   <block id="3c9164723321f1f44cff4469dc5efc3b" category="paragraph">ONTAP 이미지 생성 및 Cloud Volumes ONTAP 부팅 디스크의 보안 기능이 향상되었습니다.</block>
   <block id="695506f5b799e235f4492ce60b065e25" category="section-title">Keystone Flex 구독 지원</block>
-  <block id="26cc6717e7190c5855fa65a2ee33ab60" category="paragraph">Cloud Manager 3.9.13 릴리즈의 일부로써 Cloud Volumes ONTAP HA pair로 Keystone 유연한 구독을 사용할 수 있습니다. Keystone Flex Subscription은 종량제 구독 기반 서비스로, OpEx 소비 모델을 선호하는 사용자에게 원활한 하이브리드 클라우드 경험을 제공하여 자본 지출 또는 임대를 지원합니다.</block>
-  <block id="631442bea7b547a2d49f3db29739b6dd" category="paragraph">Keystone 유연한 가입은 Cloud Manager에서 구축할 수 있는 모든 새로운 버전의 Cloud Volumes ONTAP에서 지원됩니다.</block>
   <block id="5241b66f6612f4892510b85c57722b06" category="section-title">암호화 키 관리</block>
   <block id="6a78af9c8b3078dd0cda62677eede1dc" category="paragraph">ONTAP 9.10.1 릴리스에는 ONTAP 암호화 키를 보호하기 위해 AKV(Azure Key Vault) 또는 Google 클라우드 키 관리 서비스를 사용할 수 있는 향상된 기능이 포함되어 있습니다.</block>
   <block id="8907d74e548e23b1e94ed347d11b73c7" category="inline-link">Cloud Volumes ONTAP 암호화 지원에 대해 자세히 알아보십시오</block>
   <block id="7db2d5a0d9cf33552c832c23bcd00a7e" category="paragraph"><block ref="c3fa3413722cd4eb75878afb2fc1b45c" category="inline-link-rx"></block>.</block>
-  <block id="40a3c7b33b166dae48cfa8c02b36318a" category="section-title">Cloud Manager Connector의 필수 버전입니다</block>
-  <block id="07d37071b2c27624b2f4c9080885d2df" category="paragraph">새로운 Cloud Volumes ONTAP 9.10.1 시스템을 배포하고 기존 시스템을 9.10.1로 업그레이드하려면 Cloud Manager Connector가 버전 3.9.13 이상을 실행해야 합니다.</block>
   <block id="cc85911ae6bc3b2540142e310528310b" category="admonition">Connector의 자동 업그레이드는 기본적으로 활성화되어 있으므로 최신 버전을 실행해야 합니다.</block>
   <block id="b5cb41a6703cf18b4cecd5a0817f91cf" category="section-title">노트 업그레이드</block>
-  <block id="1abe1e6f1ab26afe1a16323464d05d4b" category="list-text">9.10.0 릴리스 및 9.9.1 릴리스에서 Cloud Volumes ONTAP 9.10.1로 업그레이드할 수 있습니다. Cloud Manager에서 적합한 Cloud Volumes ONTAP 시스템을 9.10.1 릴리즈로 업그레이드하라는 메시지가 표시됩니다.</block>
-  <block id="1c58b0eb30a6dcb357eb70a5f2b7b763" category="inline-link">Cloud Manager에서 알림을 받을 때 업그레이드하는 방법에 대해 알아보십시오</block>
-  <block id="803d45df8eb29c3872409cc750868adb" category="paragraph"><block ref="91157be1d04ccb789488c1869d33e63c" category="inline-link-rx"></block>.</block>
   <block id="9f0f02784feedfa2549a9e3a51cfa315" category="list-text">단일 노드 시스템을 업그레이드하면 시스템이 최대 25분 동안 오프라인 상태로 전환되고 이 동안 I/O가 중단됩니다.</block>
   <block id="00795e3f043d0bab791590ffc0257204" category="list-text">HA 2노드 업그레이드는 무중단으로 I/O를 업그레이드할 수 있으며 이 무중단 업그레이드 프로세스 중에 각 노드가 동시 업그레이드되어 클라이언트에 I/O를 계속 제공합니다.</block>
   <block id="2be187f608e3ad4af24d83ba1557f439" category="section-title">DS3_v2</block>
@@ -649,12 +623,9 @@
   <block id="69c3857459c8cf827b42c61c1b02fdd2" category="paragraph">OpEx 소비 모델을 선호하는 투자자들에게 원활한 하이브리드 클라우드 경험을 제공하여 선불 CapEx 또는 임대를 지불하는 종량제 구독 기반 서비스입니다.</block>
   <block id="c2d000408838a6b2031536d54c067fd9" category="paragraph">충전은 Keystone 유연한 구독에서 하나 이상의 Cloud Volumes ONTAP HA 쌍에 대한 확정된 용량 크기를 기준으로 합니다.</block>
   <block id="24e350ff356c07294161d111fa89976b" category="section-title">9.10.1 P3(2022년 5월 15일)</block>
-  <block id="0e527cc0bd71f51586da60dcfda739a8" category="paragraph">버전 3.9.13 이상을 실행하는 커넥터가 있는 경우 Microsoft Azure의 Cloud Volumes ONTAP에서 9.10.1 P3 패치를 사용할 수 있습니다. Cloud Manager에서 기존 시스템을 이 패치 릴리즈로 업그레이드하라는 메시지가 표시됩니다.</block>
   <block id="4c7cf73669136d536c96ca7317eb5ceb" category="inline-link">P3 패치에서 해결된 버그 목록을 봅니다</block>
   <block id="a722cfec26c0ca315135920010ebf5b4" category="paragraph"><block ref="bc7d1c15a2a600370c4d2552355bf0a9" category="inline-link-rx"></block> (NetApp Support 사이트 로그인 필요).</block>
-  <block id="0d8238cb20fb41ede1eb68d45d598c4f" category="list-text">단일 노드 시스템을 사용하는 경우 모든 인스턴스 유형에서 높은 쓰기 속도가 지원됩니다. 구축 중 또는 이후에 언제든지 Cloud Manager에서 빠른 쓰기 속도를 설정할 수 있습니다.<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>.</block>
   <block id="4e1b6146fa2cb1efc8bff10f1cf7e93c" category="list-text">E80ids_v4^1,2^</block>
-  <block id="7ddea5d9f1e01b01ba11b40da7046d95" category="list-text">Cloud Volumes ONTAP는 HA 쌍을 사용하는 경우 이러한 VM 유형의 빠른 쓰기 속도를 지원합니다. 구축 중 또는 이후에 언제든지 Cloud Manager에서 빠른 쓰기 속도를 설정할 수 있습니다.<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>.</block>
   <block id="75b66e0b3cef735ea985bd79ab9601e2" category="cell">m5dn.4xLarge</block>
   <block id="bc503c45d950d94391e7685c6585b286" category="cell">m5dn.12xLarge</block>
   <block id="30af1a6878bac3a7aaed5d0e64e7b511" category="paragraph">Cloud Volumes ONTAP은 다양한 라이센스 옵션을 제공하므로 요구사항에 맞는 소비 모델을 선택할 수 있습니다.</block>
@@ -668,7 +639,6 @@
   <block id="4d90d21642c7222312363da000d7409f" category="inline-link">P6 패치에서 해결된 버그 목록을 봅니다</block>
   <block id="a1a76d69474e885d4cccb97efcc9388e" category="paragraph"><block ref="748bb4ed917d0715422ce7b9282ee6b3" category="inline-link-rx"></block> (NetApp Support 사이트 로그인 필요).</block>
   <block id="7ff191df90fac0fa94ab5c2b5101a5e9" category="sidebar">모든 Cloud Manager 설명서</block>
-  <block id="da934d10ecc6d50a861d9470630d4989" category="paragraph">활용할 수 있습니다<block ref="e066b15eeebd4e6d571fd7dd588f94f7" category="inline-link-rx"></block> Cloud Volumes ONTAP를 구축할 VPC 내에서 트래픽을 필요한 로 전달하는 DNS 레코드를 구현해야 합니다<block ref="c291f5ab92cbab017e6f29ee8a0edb54" category="inline-link-rx"></block>.</block>
   <block id="e7a585efb4ff7fae4274ad6c7457c7c6" category="section-title">C4, M4 및 R4 인스턴스가 더 이상 지원되지 않음(2022년 10월 28일)</block>
   <block id="841d1ec868d8656a6dc9f74fd65112d6" category="paragraph">AWS에서 C4, M4 및 R4 EC2 인스턴스 유형은 더 이상 Cloud Volumes ONTAP에서 지원되지 않습니다. C4, M4 또는 R4 인스턴스 유형에서 실행 중인 기존 시스템이 있는 경우 C5, M5 또는 R5 인스턴스 제품군의 인스턴스 유형으로 변경해야 합니다.</block>
   <block id="6614eabe1ab14f33107830de1efb584a" category="inline-link-macro">Cloud Volumes ONTAP의 EC2 인스턴스 유형을 변경하는 방법에 대해 알아보십시오</block>
@@ -681,4 +651,34 @@
   <block id="2f9882645b2c32820ad085240bacb763" category="paragraph-title">HA의 경우 노드당 또는 전체 HA 쌍의 라이센스 용량 제한이 있습니까?</block>
   <block id="fc9a388cd18c69244f22554de6f0d544" category="paragraph-title">AWS의 HA 시스템에서 미러링된 데이터는 용량 제한에 따라 계산됩니까?</block>
   <block id="8e36f0f32d75ebd3c7851e726c538544" category="paragraph"><block ref="8e36f0f32d75ebd3c7851e726c538544" category="inline-link-rx"></block></block>
+  <block id="30749b02bc62d931d770e6c719254e7b" category="list-text">BlueXP 인터페이스는 Standard 및 BYOL:n1-highmem-4에 대해 지원되는 추가 시스템 유형을 보여 줍니다. 그러나 이 기계 유형은 생산 환경에 사용할 수 없습니다. 특정 연구소 환경에서만 사용할 수 있도록 만들었습니다.</block>
+  <block id="406542fd6b2bb7b1e564e4a6d627bddb" category="paragraph">NetApp은 시스템 용량 제한을 초과하지 않습니다. 라이센스가 부여된 용량 제한에 도달하면 BlueXP에서 필요한 작업 메시지를 표시하고 더 이상 디스크를 추가할 수 없습니다.</block>
+  <block id="59f715c959b1702bb88d03230a637982" category="paragraph">아니요, 그렇지 않습니다. AWS HA 쌍의 데이터는 노드 간에 동기식으로 미러링되므로 장애 발생 시 데이터를 사용할 수 있습니다. 예를 들어 노드 A에서 8TiB 디스크를 구입한 경우 BlueXP에서는 미러링된 데이터에 사용되는 노드 B에 8TiB 디스크도 할당합니다. 16TiB의 용량을 프로비저닝한 경우 라이센스 제한에서 8TiB만 가능합니다.</block>
+  <block id="846a4ecea919427b6111365c125ada6f" category="list-text">이 열에 나열된 번호에는 기본적으로 BlueXP에서 생성되는 초기 스토리지 VM이 포함됩니다. 예를 들어, 이 열에 24가 표시되면 총 24개의 스토리지 VM을 추가로 23개 생성할 수 있음을 의미합니다.</block>
+  <block id="bbccc552f0baf5d6702dcf1598299981" category="list-text">BlueXP는 SVM 재해 복구를 위한 설정 또는 조정 지원을 제공하지 않습니다. 또한, 추가 SVM에서 스토리지 관련 작업을 지원하지 않습니다. SVM 재해 복구에 System Manager 또는 CLI를 사용해야 합니다.</block>
+  <block id="38575f0fc0d26dc67b2a72ebc7d0e845" category="paragraph">BlueXP에서 볼륨을 생성할 때 스토리지 효율성을 선택하지 않거나 볼륨을 생성한 후 생성할 수 있습니다<block ref="41233aab48d70287f1bbc60d78ce6eab" category="inline-link-rx"></block>.</block>
+  <block id="20d13e7caaf8b4a35f4453964d84adb6" category="paragraph">클라우드 공급자의 콘솔에서 Cloud Volumes ONTAP 시스템의 구성을 변경하면 지원되지 않는 구성이 생성됩니다. BlueXP에서 생성 및 관리하는 Cloud Volumes ONTAP 리소스에 대한 모든 변경 사항은 시스템 안정성과 BlueXP의 시스템 관리 능력에 영향을 줄 수 있습니다.</block>
+  <block id="50cc29422b9e0a20958b889dcdd61a0f" category="section-title">디스크와 애그리게이트는 BlueXP에서 관리해야 합니다</block>
+  <block id="0dca6333e3e343d1b25adfe474ce6b88" category="paragraph">모든 디스크와 애그리게이트는 BlueXP에서 직접 생성 및 삭제해야 합니다. 다른 관리 도구에서 이러한 작업을 수행해서는 안 됩니다. 이렇게 하면 시스템 안정성에 영향을 주고 향후 디스크를 추가할 수 없도록 하며 중복 클라우드 공급자 비용을 생성할 수 있습니다.</block>
+  <block id="fd1f8e9df9f2971a09de148f57ee5ce0" category="section-title">소프트웨어 업데이트는 BlueXP에서 완료해야 합니다</block>
+  <block id="c6925d752394e325c0b435137fbe997c" category="paragraph">Cloud Volumes ONTAP 업그레이드는 BlueXP에서 완료해야 합니다. System Manager 또는 CLI를 사용하여 Cloud Volumes ONTAP를 업그레이드해서는 안 됩니다. 이렇게 하면 시스템 안정성에 영향을 줄 수 있습니다.</block>
+  <block id="9889b7a9df56580016f59ccd942fb1d1" category="inline-link">BlueXP 릴리스 정보</block>
+  <block id="619c180e46c9dec776a0347d35298e14" category="paragraph">최신 버전의 BlueXP에는 추가 기능 및 향상된 기능이 도입되었습니다. 를 참조하십시오<block ref="6872c7556ed1cb501f7ddf52354e86ee" category="inline-link-rx"></block> 를 참조하십시오.</block>
+  <block id="1acdda1b77e1e351bd5019808cfa153b" category="paragraph">버전 3.9.13 이상을 실행하는 커넥터가 있는 경우 Microsoft Azure의 Cloud Volumes ONTAP에서 9.10.1 P3 패치를 사용할 수 있습니다. BlueXP는 기존 시스템을 이 패치 릴리즈로 업그레이드하라는 메시지를 표시합니다.</block>
+  <block id="a13b2ab5d71282996c9529fc4b615915" category="paragraph">신규 고객인 경우 새 작업 환경을 만들 때 BlueXP에서 가입하라는 메시지를 표시합니다.</block>
+  <block id="5517dfe6c81541f8542c877d0f625ea4" category="paragraph">BlueXP는 9.10.1 RC1, 9.10.0 또는 9.9.1의 버전을 실행 중인 기존 시스템을 업그레이드하라는 메시지를 표시합니다.</block>
+  <block id="d8c1bfd0b6d5f264a5eea9ae4270c80e" category="paragraph">BlueXP 3.9.14 릴리스의 일부로 Cloud Volumes ONTAP는 이제 Microsoft Azure에서 9.10.1 릴리스부터 다음과 같은 VM 유형에서 지원됩니다.</block>
+  <block id="5982d74fa2db760387917cf949f657b7" category="paragraph">BlueXP는 Azure 구독에서 이 기능을 활성화해야 하는 Cloud Volumes ONTAP 9.10.1 시스템에 대한 작업 필요 메시지에 이러한 세부 정보를 표시합니다.</block>
+  <block id="8b7a6e34f18daa44c46a67750422a08d" category="paragraph">커넥터 3.9.13 릴리즈의 일부로 Cloud Volumes ONTAP HA 쌍으로 Keystone Flex 서브스크립션을 사용할 수 있습니다. Keystone Flex Subscription은 종량제 구독 기반 서비스로, OpEx 소비 모델을 선호하는 사용자에게 원활한 하이브리드 클라우드 경험을 제공하여 자본 지출 또는 임대를 지원합니다.</block>
+  <block id="0685e85610bbf24f3206468473d86585" category="paragraph">Keystone Flex 가입은 BlueXP에서 구축할 수 있는 모든 새로운 버전의 Cloud Volumes ONTAP에서 지원됩니다.</block>
+  <block id="69d7d15e9cd221668022d228a90f926a" category="section-title">BlueXP 커넥터의 필수 버전입니다</block>
+  <block id="738b27f4ed6287d103c8e557911a0b0c" category="paragraph">새 Cloud Volumes ONTAP 9.10.1 시스템을 배포하고 기존 시스템을 9.10.1로 업그레이드하려면 BlueXP Connector가 버전 3.9.13 이상을 실행해야 합니다.</block>
+  <block id="3cc6427d13209c321ecf222ac7d4f955" category="list-text">9.10.0 릴리스 및 9.9.1 릴리스에서 Cloud Volumes ONTAP 9.10.1로 업그레이드할 수 있습니다. BlueXP는 적합한 Cloud Volumes ONTAP 시스템을 9.10.1 릴리즈로 업그레이드하라는 메시지를 표시합니다.</block>
+  <block id="c716eebe2519c2ba4a2e109b59dd8b13" category="inline-link">BlueXP에서 알림을 받을 때 업그레이드하는 방법에 대해 알아봅니다</block>
+  <block id="bd4bd858d3e1a85d30586455b3e9daf2" category="paragraph"><block ref="6a49825bad49c3be284ac7a237bc2a26" category="inline-link-rx"></block>.</block>
+  <block id="07daff7fe86cfb582b0c246d7cefb754" category="list-text">단일 노드 시스템을 사용하는 경우 모든 인스턴스 유형에서 높은 쓰기 속도가 지원됩니다. 배포 도중 또는 이후에 BlueXP에서 빠른 쓰기 속도를 활성화할 수 있습니다.<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>.</block>
+  <block id="6098d03c49b315476cd9c4d4eb330395" category="list-text">Cloud Volumes ONTAP는 HA 쌍을 사용하는 경우 이러한 VM 유형의 빠른 쓰기 속도를 지원합니다. 배포 도중 또는 이후에 BlueXP에서 빠른 쓰기 속도를 활성화할 수 있습니다.<block ref="18805b87db41583a67ecc2414d022f2b" category="inline-link-rx"></block>.</block>
+  <block id="fde45fa5cd70a93e88151b83aa348f12" category="inline-link">BlueXP API 엔드포인트</block>
+  <block id="e86e72989c257fb5c6ba8da24c2c7c48" category="paragraph">활용할 수 있습니다<block ref="e066b15eeebd4e6d571fd7dd588f94f7" category="inline-link-rx"></block> Cloud Volumes ONTAP를 구축할 VPC 내에서 트래픽을 필요한 로 전달하는 DNS 레코드를 구현해야 합니다<block ref="85f106dabc925307c90ceeec8d21a18f" category="inline-link-rx"></block>.</block>
+  <block id="40aa449308d0af16355f19e61ffe344b" category="paragraph">아니요, 그렇지 않습니다. HA 쌍의 데이터는 노드 간에 동기식으로 미러링되므로 Google Cloud에서 장애가 발생할 경우 데이터를 사용할 수 있습니다. 예를 들어 노드 A에서 8TB 디스크를 구입한 경우 BlueXP는 미러링된 데이터에 사용되는 노드 B에도 8TB 디스크를 할당합니다. 16TB의 용량을 프로비저닝했지만 라이센스 제한에 대해 8TB만 계산합니다.</block>
 </blocks>
